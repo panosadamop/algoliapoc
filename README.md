@@ -1,4 +1,4 @@
-# E-commerce Algolia Proof of Concepts
+# E-commerce Algolia Proof of Concept
 
 ## Get started
 
