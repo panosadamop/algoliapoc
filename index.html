@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#e2a400" />
+
+    <base href="/examples/js/e-commerce/" />
+
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="shortcut icon" href="./favicon.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Hind:400,600|Open+Sans:300,400,700&display=swap"
+    />
+    <!--
+      Do not use @8 in production, use a complete version like x.x.x, see website for latest version:
+      https://www.algolia.com/doc/guides/building-search-ui/installation/js/#load-the-styles
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/reset-min.css"
+    />
+    <link rel="stylesheet" href="./src/theme.css" />
+    <link rel="stylesheet" href="./src/app.css" />
+    <link rel="stylesheet" href="./src/app.mobile.css" />
+    <link rel="stylesheet" href="./src/widgets/PriceSlider.css" />
+    <script src="./polyfills.js"></script>
+    <title>E-commerce demo | Algolia</title>
+  </head>
+
+  <body>
+    <header class="header" id="header">
+      <p class="header-logo">
+        <a href="https://kotsovolos.gr" aria-label="Go to the Kotsovolos website">
+          <svg version="1.1" id="Layer_1" width="96" height="122" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 176 217" xml:space="preserve" class="" filter=""><rect id="bg" width="185.371" height="236.385" style="fill: rgb(213, 19, 23);"></rect><path d="M28.2207 29.0389V170.358H69.8292V128.285L105.396 170.358H157.115L95.1799 99.6721L157.115 29.0694H105.396L69.8292 71.0594V29.0389H28.2207Z" fill="white"></path><path d="M165.841 213.087C165.841 214.016 165.09 214.77 164.164 214.77H20.8336C19.9077 214.77 19.1562 214.016 19.1562 213.087V184.436C19.1562 183.508 19.9077 182.754 20.8336 182.754H164.171C165.097 182.754 165.849 183.508 165.849 184.436V213.087H165.841Z" fill="#D51317"></path><path d="M35.3774 208.587C35.3547 208.519 32.7968 201.971 32.7968 201.971C32.7892 201.948 32.7665 201.933 32.7361 201.94C32.7133 201.948 32.6906 201.971 32.6906 201.994V208.595H28.1973V188.936H32.6906V194.883C32.6906 194.905 32.7057 194.928 32.7285 194.936C32.7513 194.943 32.7741 194.928 32.7892 194.905C32.7892 194.905 35.3319 188.997 35.3547 188.936H40.2047C40.144 189.081 36.2655 197.966 36.2655 197.966C36.2655 197.974 36.2579 197.974 36.2579 197.981C36.2579 197.989 36.2579 197.997 36.2579 198.004C36.2579 198.004 40.2275 208.458 40.2806 208.595H35.3774V208.587Z" fill="white"></path><path d="M65.5478 188.929V193.436H62.4055V208.587H57.7832V193.436H54.6409V188.929H65.5478Z" fill="white"></path><path d="M76.5989 188.929V193.405H72.1511C72.1511 193.405 73.9196 198.027 73.9348 198.065C73.9196 198.103 71.7412 203.897 71.7412 203.897H76.4698V208.587H65.0544C65.1151 208.45 69.3352 198.073 69.3352 198.073C69.3352 198.073 65.5933 189.073 65.5326 188.929H76.5989Z" fill="white"></path><path d="M83.8928 204.217C83.3464 204.217 81.6766 204.217 81.6766 198.773C81.6766 193.306 83.3464 193.306 83.8928 193.306C85.3805 193.306 86.1319 195.141 86.1319 198.773C86.1319 202.382 85.3805 204.217 83.8928 204.217ZM83.8928 188.693C79.688 188.693 77.0846 192.553 77.0846 198.773C77.0846 205.07 79.6273 208.823 83.8928 208.823C88.0446 208.823 90.7315 204.978 90.7315 199.032C90.7315 192.56 88.1736 188.693 83.8928 188.693Z" fill="white"></path><path d="M112.037 204.217C111.49 204.217 109.82 204.217 109.82 198.773C109.82 193.306 111.49 193.306 112.037 193.306C113.524 193.306 114.276 195.141 114.276 198.773C114.276 202.382 113.524 204.217 112.037 204.217ZM112.037 188.693C107.832 188.693 105.228 192.553 105.228 198.773C105.228 205.07 107.779 208.823 112.037 208.823C116.188 208.823 118.875 204.978 118.875 199.032C118.875 192.56 116.317 188.693 112.037 188.693Z" fill="white"></path><path d="M127.528 188.929C127.551 189.005 132.902 208.458 132.94 208.587H128.241C128.082 207.963 126.04 199.831 126.025 199.763C125.919 199.344 125.82 198.895 125.729 198.385H125.63L125.35 199.687C125.35 199.687 123.202 208.511 123.179 208.587H118.382C118.42 208.458 123.748 189.005 123.771 188.929H127.528Z" fill="white"></path><path d="M139.254 204.217C138.708 204.217 137.038 204.217 137.038 198.773C137.038 193.306 138.7 193.306 139.254 193.306C140.742 193.306 141.494 195.141 141.494 198.773C141.494 202.382 140.742 204.217 139.254 204.217ZM139.254 188.693C135.05 188.693 132.439 192.553 132.439 198.773C132.439 205.07 134.989 208.823 139.254 208.823C143.406 208.823 146.093 204.978 146.093 199.032C146.093 192.56 143.535 188.693 139.254 188.693Z" fill="white"></path><path d="M156.803 188.929V193.405H152.355C152.355 193.405 154.131 198.027 154.139 198.065C154.123 198.103 151.945 203.897 151.945 203.897H156.674V208.587H145.258C145.311 208.45 149.539 198.073 149.539 198.073C149.539 198.073 145.79 189.073 145.736 188.929H156.803Z" fill="white"></path><path d="M42.6563 203.928L42.5804 203.844C41.328 202.42 40.5159 200.083 40.5159 197.89C40.5159 193.466 42.7322 188.7 47.605 188.7C52.4778 188.7 54.694 193.466 54.694 197.89C54.694 200.022 53.8591 202.359 52.5688 203.844L52.4929 203.928H54.2614V208.587H47.992V202.9C48.0376 202.877 48.1666 202.808 48.1666 202.808C49.9047 202.146 50.0945 199.123 50.0945 197.86C50.0945 197.395 50.0262 193.306 47.605 193.306C45.1837 193.306 45.1154 197.395 45.1154 197.86C45.1154 199.398 45.3735 202.078 47.0737 202.824C47.0737 202.824 47.1116 202.854 47.1344 202.869V208.587H40.9485V203.928H42.6563Z" fill="white"></path><path d="M99.3462 204.286C98.6858 204.758 97.8054 204.796 96.8111 204.796H96.3785V200.395H96.8566C97.8206 200.395 98.6631 200.425 99.2323 200.768C99.6422 201.027 100.128 201.545 100.128 202.572C100.128 203.539 99.7029 204.042 99.3462 204.286ZM96.386 192.735H96.7959C97.5397 192.735 98.0483 192.796 98.5037 193.116C98.9439 193.436 99.1944 194.03 99.1944 194.73C99.1944 195.613 98.8073 196.101 98.4809 196.344C98.0331 196.679 97.4259 196.717 96.8414 196.717H96.386V192.735ZM101.122 198.156L101.084 198.149V198.027L101.107 198.012C102.42 197.281 103.202 195.758 103.202 193.938C103.202 192.537 102.807 191.403 102.003 190.459C101.168 189.477 99.7788 188.959 97.9951 188.959H92.1432V208.58H98.3746C99.6649 208.58 101.494 208.336 102.838 207.148C103.877 206.212 104.454 204.742 104.454 203.014C104.454 200.433 103.209 198.621 101.122 198.156Z" fill="white"></path></svg>
+        </a>
+      </p>
+
+      <p class="header-title">Stop looking for an item — find it.</p>
+
+      <div data-widget="searchbox"></div>
+    </header>
+
+    <main class="container">
+      <div class="container-wrapper">
+        <section class="container-filters">
+          <div class="container-header">
+            <h2>Φίλτρα</h2>
+
+            <div data-widget="clear-filters" data-layout="desktop"></div>
+            <div data-widget="results-number-mobile" data-layout="mobile"></div>
+          </div>
+
+          <div class="container-body">
+            <div data-widget="categories"></div>
+            <div data-widget="brands"></div>
+            <div data-widget="price-range"></div>
+            <div data-widget="free-shipping"></div>
+            <div data-widget="ratings"></div>
+          </div>
+        </section>
+
+        <footer class="container-filters-footer" data-layout="mobile">
+          <div
+            class="container-filters-footer-button-wrapper"
+            data-widget="clear-filters-mobile"
+          ></div>
+
+          <div
+            class="container-filters-footer-button-wrapper"
+            data-widget="save-filters-mobile"
+            data-action="close-overlay"
+          ></div>
+        </footer>
+      </div>
+
+      <section class="container-results">
+        <header class="container-header container-options">
+          <div class="container-option" data-widget="sort-by"></div>
+          <div class="container-option" data-widget="hits-per-page"></div>
+        </header>
+
+        <div data-widget="hits"></div>
+        <div class="hits-empty-state">
+          <div
+            data-widget="clear-filters-empty-state"
+            class="hits-empty-results"
+          ></div>
+        </div>
+
+        <footer class="container-footer">
+          <nav data-widget="pagination"></nav>
+        </footer>
+      </section>
+    </main>
+
+    <aside data-layout="mobile">
+      <button class="filters-button" data-action="open-overlay">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 14">
+          <path
+            d="M15 1H1l5.6 6.3v4.37L9.4 13V7.3z"
+            stroke="#fff"
+            stroke-width="1.29"
+            fill="none"
+            fill-rule="evenodd"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        Filters
+      </button>
+    </aside>
+
+    <script type="module" src="./src/app.ts"></script>
+  </body>
+</html>
