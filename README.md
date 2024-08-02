@@ -1,8 +1,4 @@
-# E-commerce demo
-
-[![Edit e-commerce](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/algolia/instantsearch/tree/master/examples/js/e-commerce)
-
-_This project was generated with [create-instantsearch-app](https://github.com/algolia/instantsearch/tree/master/packages/create-instantsearch-app) by [Algolia](https://algolia.com)._
+# E-commerce Algolia Proof of Concepts
 
 ## Get started
 
@@ -27,15 +23,8 @@ Open http://localhost:3000 to see your app.
 This application is made for two reasons:
 
 - end to end tests
-- code that can be reused on a regular InstantSearch project
-
-This means that some of the setup won't work out of the box on every machine. This requires that you:
-
-- use a UNIX system (like Mac or Linux)
-- build the library before starting this example:
+- code that can be reused on the actual Kotsovolos - Algolia implementation
 
 ```sh
 yarn install && yarn build && (cd examples/e-commerce/ && yarn start)
 ```
-
-Alternatively to that, you can remove the `alias` in package.json for `instantsearch.js` to `../../`
